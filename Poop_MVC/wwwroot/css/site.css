@@ -1,22 +1,108 @@
-html {
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
+:root {
+    --logo-primary-color: #C99383;
+    --logo-secondary-color: #83B8C9;
+    --logo-third-color: #b8c983;
+    --logo-dark: #232C33;
+    /*App Specific Color Pallette*/
+    --light: #fefefe;
+    --dark: #232C33;
+    --pure-white: #ffffff;
+    --pure-black: #000000;
+    --lightmode-primary: #128082;
+    --lightmode-secondary: #7f2e89;
+    --lightmode-accent: #ff5900ff;
+    --darkmode-accent: #1CCCCE;
+    --darkmode-primary: #e09f3e;
 }
 
 body {
-  margin-bottom: 60px;
+    color: var(--dark);
+    background-color: var(--light);
+}
+
+nav {
+    background-color: var(--logo-dark);
+}
+
+footer {
+    background-color: var(--logo-dark);
+    padding: 1rem;
+}
+
+    footer .social > a {
+        color: var(--light);
+        opacity: .75;
+    }
+
+        footer .social > a:hover {
+            opacity: .9;
+            color: var(--logo-secondary-color);
+        }
+
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--lightmode-primary);
+}
+
+.subheading {
+    color: var(--lightmode-accent);
+}
+
+.field-title {
+    color: var(--lightmode-primary);
+}
+
+.alert {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+
+main > .container {
+    padding: 60px 15px 0;
+    margin-bottom: 5rem;
+}
+
+.sticky-nav {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.checklist {
+    color: var(--lightmode-primary);
+}
+
+    .checklist > li i {
+        color: var(--lightmode-accent);
+    }
+
+.alert {
+    color: var(--light);
+    background-color: var(--dark);
+}
+
+
+code[class*="language-"],
+pre[class*="language-"] {
+    white-space: pre-wrap;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.bsicon {
+    color: #7c09f8;
+}
+
+.jsicon {
+    color: #e2d304;
+}
+
+.html5icon {
+    color: #fe4e1d;
+}
+
+.css3icon {
+    color: #0b52d6;
 }
