@@ -1,0 +1,51 @@
+﻿@model Poop_MVC.Models.PalindromeModel
+
+
+<div class="container col-xxl-8 py-5 mt-5">
+    <div class="row row-cols-1 row-cols-lg-2 g-5 py-1">
+
+        <div class="col col-lg-5 border-end border-dark border-1">
+            <h1 class="display-4 lh-2 fw-bold">Poop!</h1>
+            <h2 class="subheading display-3 lh-2 mb-4">The App</h2>
+            <p class="lead">A palinddrome is a sequence of characters that are the same read forward or backward. For example: "Pooping is a sign I poop!" is a palindrome. </p>
+            <p class="lead">Give it a try, but don't strain too hard coming up with your own hilarious examples!</p>
+
+            <h2 class="mt-5 border-bottom border-2">Instructions:</h2>
+            <p>Enter your text in the field, then activate the button to check your work. Feel free to use punctuation and special characters! They will be ignored, and won't affect the result.</p>
+        </div>
+
+        <div class="col col-lg-7">
+            <p class="display-6 field-title">Is this a Palindrome?</p>
+            <form class="row row-cols-2 gy-2 gx-3" asp-action="Reverse" asp-controller="Home" method="post">
+                <div class="col">
+                    <label for="InputWord">Enter Text Here</label>
+                    <input asp-for="InputWord" type="text" class="form-control" placeholder="Enter Text Here" value="@Model.InputWord" aria-label="Enter Text">
+                </div>
+                <div class="col-12 d-flex">
+                    <button id="btnSubmit" type="submit" class="btn btn-outline-dark btn-lg">Check My Text</button>
+                </div>
+            </form>
+
+            <h2 class="mt-5 border-bottom border-2">Reversed Result</h2>
+            <div class="col">
+                <p class="form-control">@Model.RevWord</p>
+            </div>
+
+            <h2 class="mt-5 border-bottom border-2">Palindrome Result</h2>
+            <div class="table-responsive">
+                <p id="results" class="d-flex alert border-bottom lead pt-0 alert">
+                    @Model.Message
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-lg-center">
+    <blockquote cite="https://the-big-bang-theory.com/quotes/quote/416/">
+        <p>
+            "Yeah, I have to say, I thought the toilet humor would get less funny with repetition. Apparently, there is no law of diminishing comedic returns with space poop"
+        </p>
+    </blockquote>
+    <p>-Sheldon Cooper, <cite>Big Bang Theory</cite></p>
+</div>
